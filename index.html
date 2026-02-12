@@ -1,0 +1,67 @@
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cricket League Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Cricket League</h1>
+  <h2>Team Registration</h2>
+
+  <form id="teamForm">
+
+    <!-- Team Details -->
+    <input type="text" id="teamName" placeholder="Team Name" required>
+    <input type="text" id="captain" placeholder="Captain Name" required>
+    <input type="text" id="viceCaptain" placeholder="Vice Captain Name" required>
+    <input type="tel" id="mobile" placeholder="Mobile Number" required>
+
+    <!-- Players -->
+    <h3>Players</h3>
+
+    <input type="text" class="player" placeholder="Player 1" required>
+    <input type="text" class="player" placeholder="Player 2" required>
+    <input type="text" class="player" placeholder="Player 3" required>
+    <input type="text" class="player" placeholder="Player 4" required>
+    <input type="text" class="player" placeholder="Player 5" required>
+    <input type="text" class="player" placeholder="Player 6" required>
+    <input type="text" class="player" placeholder="Player 7" required>
+
+    <!-- Submit -->
+    <button type="submit">Register Team</button>
+
+  </form>
+</div>
+
+<!-- SUCCESS POPUP MODAL -->
+<div id="successModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <h2>🎉 Congratulations!</h2>
+    <p>Your team registration is successful.</p>
+
+    <button onclick="downloadPDF()">Download Registration Form</button>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<!-- Firebase Libraries -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+<!-- Project Scripts -->
+<script src="firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
